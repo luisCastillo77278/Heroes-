@@ -1,0 +1,8 @@
+<h1>Buscar: <small>{{termino}}</small> </h1>
+<hr>
+<div *ngIf="heroes.length==0" class="alert alert-danger" role="alert">
+    El termino {{ termino }} que indico no se encuentra
+</div>
+<div class="card-columns">
+    <app-heroe-targeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-targeta>
+</div>
